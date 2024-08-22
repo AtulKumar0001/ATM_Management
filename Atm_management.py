@@ -37,9 +37,6 @@ except Exception as e:
 
 
 
-# Add a new field to the user and admin documents to track login attempts and lock status. (Not needed)
-# user_collection.update_many({}, {"$set": {"login_attempts": 0, "account_locked": False}})
-# admin_collection.update_many({}, {"$set": {"login_attempts": 0, "account_locked": False}})
 
 # Define the number of allowed login attempts and lock duration
 MAX_LOGIN_ATTEMPTS = 3
@@ -132,7 +129,6 @@ def Userlogin():
     if user_input2:
         password = user_input2
 
-    # old way 
     # user_id = input("Please enter your user_id: ")
     # password = input("Please enter your user password: ")
 
